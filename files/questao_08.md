@@ -1,7 +1,4 @@
 # Questão 08 - Postmortem técnico de incidente em produção
-
-## Entrega
-
 ---
 
 # Prompt (Framework R-T-F)

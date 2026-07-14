@@ -1,7 +1,4 @@
 # Questão 02 – Script de backup do Ledger
-
-## Entrega
-
 ---
 
 # Prompt (Framework R-T-F)

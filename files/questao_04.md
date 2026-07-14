@@ -1,6 +1,4 @@
 # Questão 04 - Relatório mensal de transações do Ledger
-## Entrega
-
 ---
 
 ## Framework utilizado: T-A-G (Task - Action - Goal)

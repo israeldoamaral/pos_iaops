@@ -1,7 +1,4 @@
 # Questão 01 – Dockerfile para o Lift
-
-## Entrega
-
 ---
 
 # Prompt (Framework R-T-F)

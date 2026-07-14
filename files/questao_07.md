@@ -1,7 +1,4 @@
 # Questão 07 - Runbook para alerta recorrente
-
-## Entrega
-
 ---
 
 # Prompt (Framework R-I-S-E)

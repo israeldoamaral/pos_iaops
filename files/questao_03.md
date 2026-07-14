@@ -1,7 +1,4 @@
 # Questão 03 - Relatório de Redução de Custos Cloud
-
-## Entrega
-
 ---
 
 ## Framework utilizado: T-A-G (Task - Action - Goal)

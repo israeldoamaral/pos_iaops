@@ -1,7 +1,4 @@
 # Questão 06 - Módulo Terraform no padrão interno
-
-## Entrega
-
 ---
 
 ## Framework utilizado: C-A-R-E (Context - Action - Result - Example)

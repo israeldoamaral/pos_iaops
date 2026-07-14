@@ -1,7 +1,4 @@
 # Questão 05 - Modernizar deployment legado
-
-## Entrega
-
 ---
 
 ## Framework utilizado: B-A-B (Before - After - Bridge)
