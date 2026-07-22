@@ -1,4 +1,7 @@
 # Questão 03 - Relatório de Redução de Custos Cloud
+
+## Entrega
+
 ---
 
 ## Framework utilizado: T-A-G (Task - Action - Goal)
@@ -81,6 +84,8 @@ Produza um relatório executivo em Markdown contendo:
 # Modelo
 
 **Modelo sugerido:** GPT-5.5 (ChatGPT)
+
+**Justificativa da escolha:** O GPT-5.5 foi escolhido pela capacidade de análise quantitativa sobre dados estruturados (CSV) combinada com geração de relatório executivo formatado. O prompt exige que o modelo calcule o custo total, estime economia por oportunidade, calcule percentuais sobre a conta e verifique se a meta de 15% é atingível — tudo com base nos 12 serviços do CSV. Modelos com forte raciocínio aritmético e boa qualidade de formatação Markdown em uma única resposta são os mais indicados para esse tipo de tarefa analítica com saída estruturada para liderança.
 
 
 ---

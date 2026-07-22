@@ -1,4 +1,7 @@
 # Questão 08 - Postmortem técnico de incidente em produção
+
+## Entrega
+
 ---
 
 # Prompt (Framework R-T-F)
@@ -69,6 +72,8 @@ Produza o postmortem nas seções abaixo, nesta ordem, em português:
 # Modelo
 
 **Modelo utilizado:** Claude Sonnet 4.6 (Anthropic)
+
+**Justificativa da escolha:** O Claude Sonnet 4.6 foi escolhido pela combinação de raciocínio causal sobre artefatos técnicos heterogêneos (métricas, logs, changelog, estado de cluster) e geração de output estruturado sob restrições rígidas de formato. O postmortem exige que o modelo construa a cadeia causal a partir de quatro fontes distintas de evidência, produza uma análise comparativa objetiva entre duas opções de mitigação e entregue uma recomendação justificada — tudo em seis seções ordenadas consumíveis em 20 minutos por um engenheiro sob pressão de incidente. O Claude Sonnet 4.6 demonstra precisão na correlação de evidências técnicas e consistência no seguimento de estruturas de output definidas no componente Format do R-T-F.
 
 ---
 

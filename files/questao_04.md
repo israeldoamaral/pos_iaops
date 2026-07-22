@@ -1,4 +1,6 @@
 # Questão 04 - Relatório mensal de transações do Ledger
+## Entrega
+
 ---
 
 ## Framework utilizado: T-A-G (Task - Action - Goal)
@@ -21,15 +23,16 @@ Schemas das tabelas:
 
 Regras de filtragem, cálculo e formatação:
 1. Filtre apenas transações que tenham status = 'completed'.
-2. Defina o período para os últimos 6 meses corridos a partir de '2026-04-24' (ou seja, de '2025-10-24' até '2026-04-24'). Use o campo `created_at`.
-3. Converta o valor do campo `amount_cents` (que está em centavos) para Reais (com duas casas decimais).
-4. Agrupe os dados por mês (no formato YYYY-MM) e por categoria.
-5. A saída deve conter as seguintes colunas por linha:
+2. Filtre apenas transações cujo campo `category` seja um dos seguintes valores: 'subscription', 'one_time', 'refund', 'credit_adjustment'.
+3. Defina o período para os últimos 6 meses corridos a partir de '2026-04-24' (ou seja, de '2025-10-24' até '2026-04-24'). Use o campo `created_at`.
+4. Converta o valor do campo `amount_cents` (que está em centavos) para Reais (com duas casas decimais).
+5. Agrupe os dados por mês (no formato YYYY-MM) e por categoria.
+6. A saída deve conter as seguintes colunas por linha:
    - Mês (formatado como YYYY-MM)
    - Categoria (category)
    - Quantidade de transações
    - Volume total em Reais (com duas casas decimais)
-6. Ordene o resultado final por mês em ordem crescente e, em seguida, por categoria em ordem crescente.
+7. Ordene o resultado final por mês em ordem crescente e, em seguida, por categoria em ordem crescente.
 
 ## G (Goal)
 
@@ -41,12 +44,14 @@ O objetivo final é obter uma query SQL otimizada (aproveitando os índices cria
 
 **Modelo sugerido:** GPT-4o (OpenAI)
 
+**Justificativa da escolha:** O GPT-4o foi escolhido por seu desempenho consolidado em geração de SQL PostgreSQL com atenção a otimização de índices. O prompt exige que o modelo produza uma query que use as colunas indexadas no `WHERE`, converta centavos para reais (`/ 100.0`), formate datas com `TO_CHAR` e entregue aliases amigáveis para apresentação executiva — detalhes que modelos menores tendem a ignorar ou errar. O GPT-4o já demonstrou consistência nesse tipo de tarefa sem exigir múltiplas iterações, o que o torna adequado para uma entrega única de SQL pronto para uso.
+
 
 ---
 
 # Output
 
-```
+```sql
 SELECT 
     TO_CHAR(created_at, 'YYYY-MM') AS mes,
     category,
@@ -56,6 +61,7 @@ FROM
     transactions
 WHERE 
     status = 'completed'
+    AND category IN ('subscription', 'one_time', 'refund', 'credit_adjustment')
     AND created_at >= '2026-04-24'::TIMESTAMPTZ - INTERVAL '6 months'
     AND created_at <= '2026-04-24'::TIMESTAMPTZ
 GROUP BY 

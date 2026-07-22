@@ -1,4 +1,7 @@
 # Questão 06 - Módulo Terraform no padrão interno
+
+## Entrega
+
 ---
 
 ## Framework utilizado: C-A-R-E (Context - Action - Result - Example)
@@ -67,6 +70,8 @@ resource "aws_vpc" "this" {
 # Modelo
 
 **Modelo utilizado:** Claude Sonnet 4.6 (Anthropic)
+
+**Justificativa da escolha:** O Claude Sonnet 4.6 foi escolhido pela capacidade de aprender e replicar um padrão de código a partir de um exemplo injetado no prompt — exatamente o que o componente Example do C-A-R-E exige. O módulo VPC existente é fornecido como referência de estilo (indentação, prefixo `hvt-`, uso de `locals`, padrão de `merge()`, convenção `var.owner`). O modelo precisa inferir e replicar esse estilo no novo módulo S3 sem desvios. O Claude Sonnet 4.6 demonstra alta fidelidade a exemplos de código Terraform fornecidos no contexto, produzindo o conjunto de quatro arquivos (`main.tf`, `variables.tf`, `outputs.tf`, `README.md`) no padrão interno sem necessidade de correção manual.
 
 ---
 

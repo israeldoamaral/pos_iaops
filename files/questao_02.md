@@ -1,4 +1,7 @@
 # Questão 02 – Script de backup do Ledger
+
+## Entrega
+
 ---
 
 # Prompt (Framework R-T-F)
@@ -35,6 +38,8 @@ Entregue apenas o script bash completo, pronto para produção, com:
 # Modelo
 
 **Modelo utilizado:** Claude Sonnet 5 (Anthropic)
+
+**Justificativa da escolha:** O Claude Sonnet 5 foi escolhido pela combinação de raciocínio técnico preciso em Bash e alta fidelidade a restrições de produção. O script exige lógica não trivial — pipe direto `pg_dump | gzip` sem arquivo intermediário, exit codes distintos por tipo de falha, validação de espaço em disco, limpeza de retenção no S3 com comparação de datas — e qualquer desvio gera um script que passa em leitura mas falha em produção. O Claude Sonnet 5 demonstra consistência na geração de scripts com `set -euo pipefail`, funções nomeadas e tratamento de erro estruturado sem necessidade de iteração de prompt.
 
 ---
 

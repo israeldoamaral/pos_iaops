@@ -1,4 +1,7 @@
 # Questão 05 - Modernizar deployment legado
+
+## Entrega
+
 ---
 
 ## Framework utilizado: B-A-B (Before - After - Bridge)
@@ -89,6 +92,8 @@ Responda apenas com o YAML e a tabela. Sem texto introdutório.
 # Modelo
 
 **Modelo utilizado:** Claude Sonnet 4.6 (Anthropic)
+
+**Justificativa da escolha:** O Claude Sonnet 4.6 foi escolhido pela precisão na transformação de manifesto Kubernetes com mapeamento explícito de problemas. O framework B-A-B exige que o modelo mapeie cada item do Before em um item do After — 10 requisitos de modernização — e entregue uma tabela de correspondência junto com o YAML final. O Claude Sonnet 4.6 tem desempenho consistente em tarefas de refatoração estruturada onde o output precisa ser justificado linha a linha, sem introduzir campos não solicitados nem omitir os obrigatórios (como `name` e `namespace` que deveriam ser preservados).
 
 ---
 

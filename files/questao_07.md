@@ -1,4 +1,7 @@
 # Questão 07 - Runbook para alerta recorrente
+
+## Entrega
+
 ---
 
 # Prompt (Framework R-I-S-E)
@@ -52,6 +55,8 @@ Entregue o runbook em Markdown estruturado com headers claros por seção.
 # Modelo
 
 **Modelo utilizado:** Claude Sonnet 4.6 (Anthropic)
+
+**Justificativa da escolha:** O Claude Sonnet 4.6 foi escolhido por sua capacidade de gerar documentação operacional com comandos literais e condicionais precisos para ambientes Kubernetes/EKS. O runbook exige `kubectl`, `aws cli` e `argocd cli` com flags exatas, thresholds numéricos verificáveis (`> 80%`, `> 500ms`) e um checklist de encerramento funcional — não prosa explicativa. O Claude Sonnet 4.6 tende a produzir runbooks acionáveis em uma única geração quando o prompt R-I-S-E define explicitamente o critério de qualidade na seção `[EXPECTATION]`, evitando o erro comum de modelos que geram texto de tutorial onde se espera documento de on-call.
 
 ---
 
